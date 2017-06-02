@@ -1,0 +1,13 @@
+module CorbaApp{
+        interface Corba{
+
+                short regist(in wstring username, in wstring pass);
+                short login(in wstring username, in wstring pass);
+                short add(in wstring username, in wstring date1, in wstring date2, in wstring label);
+                wstring query(in wstring username, in wstring starttime, in wstring endtime);
+                short delete(in wstring username, in long long id);
+                short clear(in wstring username);
+
+                oneway void shutdown();
+        };
+};
